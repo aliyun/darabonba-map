@@ -4,7 +4,7 @@
 	"version": "0.0.1",
 	"main": "./main.tea",
 	"releases": {
-		"go": "github.com/alibabacloud-go/darabonba-map/golang/client:v0.0.1",
+		"go": "github.com/alibabacloud-go/darabonba-map/client:v0.0.1",
 		"ts": "@alicloud/darabonba-map:^0.0.1",
 		"java": "com.aliyun:darabonba-map:0.0.1"
 	},

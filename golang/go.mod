@@ -1,4 +1,4 @@
-module github.com/alibabacloud-go/darabonba-map/golang
+module github.com/alibabacloud-go/darabonba-map
 
 go 1.14
 
