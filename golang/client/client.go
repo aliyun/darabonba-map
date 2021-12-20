@@ -14,10 +14,21 @@ func Size(raw map[string]interface{}) (_result *int) {
 	return tea.Int(count)
 }
 
-func KeySet(raw map[string]interface{}) (_result []*string) {
+func KeySet(raw interface{}) (_result []*string) {
 	slice := tea.StringSliceValue(_result)
-	for k := range raw {
-		slice = append(slice, k)
+	switch v := raw.(type) {
+	case map[string]interface{}:
+		for k := range v {
+			slice = append(slice, k)
+		}
+	case map[string]string:
+		for k := range v {
+			slice = append(slice, k)
+		}
+	case map[string]*string:
+		for k := range v {
+			slice = append(slice, k)
+		}
 	}
 	return tea.StringSlice(slice)
 }

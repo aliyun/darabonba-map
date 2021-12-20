@@ -32,4 +32,23 @@ func Test_KeySize(t *testing.T) {
 	res := tea.StringSliceValue(result)
 	sort.Strings(res)
 	utils.AssertEqual(t, []string{"a", "c", "中国"}, res)
+	m := map[string]*string{
+		"2": tea.String("1"),
+		"1": tea.String("2"),
+		"6": tea.String("6"),
+	}
+	result = KeySet(m)
+	res = tea.StringSliceValue(result)
+	sort.Strings(res)
+	utils.AssertEqual(t, []string{"1", "2", "6"}, res)
+
+	ma := map[string]string{
+		"4": "4",
+		"2": "2",
+		"6": "6",
+	}
+	result = KeySet(ma)
+	res = tea.StringSliceValue(result)
+	sort.Strings(res)
+	utils.AssertEqual(t, []string{"2", "4", "6"}, res)
 }
