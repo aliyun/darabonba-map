@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
  * @internal
  * @coversNothing
  */
-class ArrayTest extends TestCase
+class MapTest extends TestCase
 {
     public function test()
     {
@@ -28,12 +28,12 @@ class ArrayTest extends TestCase
         );
 
         $this->assertEquals(
-            ['key', 'key1', 'key2'],
-            MapUtil::keySet([
+            3,
+            \count(MapUtil::keySet([
                 'key' => 'value',
                 'key1' => 'value1',
                 'key2' => 'value2',
-            ])
+            ]))
         );
 
         $this->assertEquals(

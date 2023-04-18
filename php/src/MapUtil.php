@@ -12,6 +12,11 @@ namespace AlibabaCloud\Darabonba\MapUtil;
  */
 class MapUtil
 {
+    /**
+     * @param array $raw
+     *
+     * @return int
+     */
     public static function size($raw)
     {
         if (!isset($raw)) {
@@ -22,9 +27,9 @@ class MapUtil
     }
 
     /**
-     * @param string[] $raw
+     * @param array $raw
      *
-     * @return bool
+     * @return string[]
      */
     public static function keySet($raw)
     {
