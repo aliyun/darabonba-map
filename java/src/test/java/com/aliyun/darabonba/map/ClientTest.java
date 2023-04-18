@@ -10,6 +10,7 @@ public class ClientTest {
     @Test
     public void sizeTest() {
         Map<String, String> map = new HashMap<>();
+        Assert.assertEquals(0, Client.size(map).longValue());
         map.put("test1", "test1");
         map.put("test2", "test2");
         Assert.assertEquals(2, Client.size(map).longValue());
@@ -18,10 +19,9 @@ public class ClientTest {
     @Test
     public void keySetTest() {
         Map<String, String> map = new HashMap<>();
+        Assert.assertEquals(0, Client.keySet(map).size());
         map.put("test1", "test1");
         map.put("test2", "test2");
         Assert.assertEquals(2, Client.keySet(map).size());
-        Assert.assertEquals("test2", Client.keySet(map).get(1));
-        Assert.assertEquals("test1", Client.keySet(map).get(0));
     }
 }

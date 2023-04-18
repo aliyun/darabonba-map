@@ -11,13 +11,9 @@ class Client:
         pass
 
     @staticmethod
-    def size(
-        raw: Dict[str, Any],
-    ) -> int:
+    def size(raw):
         return len(raw)
 
     @staticmethod
-    def key_set(
-        raw: Dict[str, Any],
-    ) -> List[str]:
+    def key_set(raw):
         return raw.keys()
